@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MakersBnB</title>
+
+        <!--
+            Head to https://github.com/makersacademy/web-applications-in-python/blob/main/pills/loading_css_or_static_files.md
+            If you're wondering how the CSS file below is being loaded.
+        -->
+        <link rel="stylesheet" href="/static/style.css" >
+    </head>
+    <body id="listingpage">
+        <div style="width: 100%;">
+            <a id="beautiful-button" style="float: right;" href="/login">Log In</a>
+        </div><br><br>
+        <h1 id="Heading">Feel at home, searching from another!</h1>
+        <div id="OuterBox">
+            <p id="Heading">Sign Up</p>
+        <form method="POST" action="/login">
+            <!-- <label for="name" id="name" class="Row">Name: 
+                <input id="name" name="name" type="text" required placeholder="Enter your name">
+            </label>
+                <br>
+            <label for="email" id="email">Email Address: 
+                <input id="email" type="text" name="email" required placeholder="Enter your email address">
+            </label>
+                <br>
+            <label for="password" id="password">Password: 
+                <input id="password" name="password" type="password" required placeholder="Enter your password">
+            </label>
+                <br>
+            <input type="submit" value="submit">
+            ------- -->
+            <p id="Row">
+                <label for="name" id="name" >Name: </label><br>
+                <input class="textboxes" id="name" name="name" type="text" required placeholder="Enter your name">
+            </p>
+            <p id="Row">
+                <label for="email" id="email">Email Address: </label><br>
+                <input class="textboxes" id="email" type="text" name="email" required placeholder="Enter your email address">
+            </p>
+            <p id="Row">
+                <label for="password" id="password">Password: </label><br>
+                <input class="textboxes" id="password" name="password" type="password" required placeholder="Enter your password">
+            </p>
+            <p><input id="beautiful-button" type="submit" value="Submit"></p>
+        </form>
+        </div>
+        <br>
+        <br>
+        
+    </body>
+</html>

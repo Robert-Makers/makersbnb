@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create a Listing</title>
+
+        <!--
+            Head to https://github.com/makersacademy/web-applications-in-python/blob/main/pills/loading_css_or_static_files.md
+            If you're wondering how the CSS file below is being loaded.
+        -->
+        <link rel="stylesheet" href="/static/style.css" >
+    </head>
+    <body id="listingpage">
+        <h1>Create a Listing</h1>
+        <div id="OuterBox">
+        <form action="" method="post">
+            <p id="Row">
+                <label for="title">Title</label><br>
+                <input type="text" name="title" id="title" class="textboxes" required>
+            </p>
+            <p id="Row">
+                <label for="description">Description</label><br>
+                <input type="text" name="description" id="description" class="textboxes" required>
+            </p>
+            <p id="Row">
+                <label for="price">Price Per Night: £</label><br>
+                <input type="text" name="price" id="price" class="textboxes" required>
+            </p>
+            <p><input id="beautiful-button" type="submit" value="Submit"></p>
+        </form>
+    </div>
+    </body>
+</html>

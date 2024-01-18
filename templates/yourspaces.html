@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+    <link rel="stylesheet" href="/static/style.css" >
+    </head> 
+        <body> 
+            <h1 id="Heading">Your Spaces</h1> 
+            <div id="structureBooking">
+                <div id="OuterBox"> 
+                    {% if listing %}
+                        {% for list in listing %}
+                        <a href="/listing/{{list.id}}?id={{id}}"> 
+                            <div id="InnerBox">
+                            <h2> {{list.title}}</h2>
+                            <p>{{list.description}}</p>
+                        </div></a>
+                        {%endfor%}
+                    {% else %}
+                    <div id="InnerBox">
+                        <h2>You have no listings</h2>
+                    </div>
+                    {% endif %}
+                </div>
+            </div> 
+        </body> 
+</html>

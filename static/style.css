@@ -1,0 +1,200 @@
+body {
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+/*Requests*/
+#div1Requests {
+    flex: 49%;
+    width: 45%;
+    position: absolute;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #dddddd78;
+}
+
+#div2Requests {
+    flex: 49%;
+    width: 45%;
+    float: right;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #dddddd78;
+}
+
+.column {
+    width: 50%;
+    text-align: center;
+    float: left;
+}
+
+.column2 {
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#test {
+    display: flex;
+    padding: 20px;
+}
+
+
+#MainDivrequests {
+    width: 90%;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+/*--------------------*/
+/*Homepage*/
+#mainDivHomepage {
+    max-width: 95%;
+    padding: 20px;
+    margin: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+#rowHomepage {
+    width: 25%;
+    text-align: center;
+}
+/*--------------------*/
+
+#Heading {
+    text-align: center;
+}
+
+#OuterBox {
+    width: 45%;
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 12px;
+    background-color: #dddddd78;
+}
+
+#InnerBox {
+    text-align: left;
+    padding: 10px;
+    border: 2px solid #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+#structureBooking {
+    text-align: center;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #000
+}
+
+#listingpage {
+    text-align: center;
+}
+
+#Row {
+    text-align: left;
+    margin-left: 35%
+}
+
+
+.textboxes {
+    width: 45%
+}
+
+#beautiful-button {
+    background-color: #dedede;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+#beautiful-button:hover {
+    background-color: #fff;
+}
+#beautiful-button:before {
+    top: -25%;
+    left: 20%;
+}
+
+#beautiful-button:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+#beautiful-button:hover:before,
+#beautiful-button:hover:after {
+    transform: none;
+}
+#beautiful-button:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+@media (min-width: 768px) {
+    #beautiful-button {
+        min-width: 120px;
+        padding: 0 25px;
+    }
+}
+
+#PriceBox {
+    width: 10%;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 12px;
+    background-color: #dddddd78;
+}
+
+#ConfirmationBox {
+    height: 70%;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 2px solid #000;
+    border-radius: 12px;
+    background-color: #dddddd78;
+    padding: 10px;
+    display: flex;
+}
+
+#BookingDetails {
+    float: left;
+    width: 45%;
+    text-align: left;
+    margin-right: 4.5%;
+}
+
+#BookingPrice{
+    float: right;
+    width: 45%;
+    text-align: right;
+    padding-left: 4.5%;
+    border-left: 2px solid #000;
+}
+
+#PriceTag {
+    font-size: larger;
+}

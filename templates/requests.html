@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requests</title>
+    <link rel="stylesheet" href="/static/style.css" >
+</head>
+<body>
+    {% if id %}
+    <h1 id="Heading">Requests</h1>
+    <p id="Heading">This is a description for the requests page</p>
+    <div id="test">
+        <div class="column">
+            <h2>Requests I've made</h2>
+            <div id="div1Requests">
+                <div id="InnerBox">
+                    {% for i in sent_requests %}
+                    <h3>{{i.listing.title}}</h3>
+                    <p>Check-in: {{i.date_from}}</p>
+                    <p>Check-out: {{i.date_to}}</p>
+                    <p>Cost: {{i.calculate_cost(i.listing.price)}}</p>
+                    <p>Status: {{i.status}}</p>
+                    <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h2>Requests I've received</h2>
+            <div id="div1Requests">
+                <div id="InnerBox">
+                    {% for i in recieved_requests %}
+                    <a href="/request_details/{{i.id}}?id={{i.listing.host_user_id}}"><u><h3>{{i.listing.title}}</h3></u></a>
+                    <p>Check-in: {{i.date_from}}</p>
+                    <p>Check-out: {{i.date_to}}</p>
+                    <p>Cost: {{i.calculate_cost(i.listing.price)}}</p>
+                    <p>Status: {{i.status}}</p>
+                    <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div> Please log in to view content </div>
+    <a href="/login">Login page</a>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requests</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    {% if user_id %}
+    <h1 id="Heading">{{booking.listing.title}}</h1>
+    <div id="structureBooking">
+        <div class="column2">
+                <div id="OuterBox">
+                    <div id="InnerBox">
+                        <h3>{{booking.listing.title}}</h3>
+                        <p>Check-in: {{booking.date_from}}</p>
+                        <p>Check-out: {{booking.date_to}}</p>
+                        <p>Cost: {{booking.calculate_cost(booking.listing.price)}}</p>
+                        <p>Current Status: {{booking.status}}</p>
+                        <br>
+                        <form action="" method="post">
+                            <label for="status">Confirm Booking: </label>
+                            <select name="status" id="status" style="border: 2px solid #000;border-radius: 12px;">
+                                <option value="approved">Approved</option>
+                                <option value="denied">Denied</option>
+                            </select>
+                            <input type="submit" value="Submit" id="beautiful-button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    {% else %}
+    <div> Please log in to view content </div>
+    <a href="/login">Login page</a>
+    {% endif %}
+</body>
+
+</html>

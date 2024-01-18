@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MakersBnB</title>
+
+        <!--
+            Head to https://github.com/makersacademy/web-applications-in-python/blob/main/pills/loading_css_or_static_files.md
+            If you're wondering how the CSS file below is being loaded.
+        -->
+        <link rel="stylesheet" href="/static/style.css" >
+    </head>
+    <body>
+        <h1 id="Heading">Welcome {{name}}!</h1>
+        <p id="Heading" style="width: 100%;">Logged in homepage</p>
+        <div id="mainDivHomepage">
+            <div id="rowHomepage"><a href="/book?id={{id}}"><h1>Book a space</h1></a></div>
+            <div id="rowHomepage"><a href="/create?id={{id}}"><h1>List a space</h1></a></div>
+            <div id="rowHomepage"><a href="/requests?id={{id}}"><h1>View requests</h1></a></div>
+            <div id="rowHomepage"><a href="/yourspaces?id={{id}}"><h1>Your spaces</h1></a></div>
+        </div>
+        <div style="text-align: center;">
+            <!--Chances of copyright for this image-->
+            <img src="//freeforcommercialuse.net/images/c/1306/furniture-in-living-room-royalty-3129.jpg"  width="80%" height="80%">
+        </div>
+    </body>
+</html>
