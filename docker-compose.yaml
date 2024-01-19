@@ -8,6 +8,7 @@ services:
       - db  # Ensure the app starts after the database
   db:
     image: postgres:latest  # Use the latest Postgres image
+    user: ${POSTGRES_USER}
     ports:
     - "5432:5432"
     environment:
