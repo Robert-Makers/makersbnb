@@ -15,8 +15,8 @@ class DatabaseConnection:
     postgres_user = os.environ.get("POSTGRES_USER")
     postgres_password = os.environ.get("POSTGRES_PASSWORD")
 
-    print(postgres_user)
-    print(postgres_password)
+    print(f'USERNAME: {postgres_user}')
+    print(f'PASSWORD: {postgres_password}')
 
     def __init__(self, test_mode=False):
         self.test_mode = test_mode
