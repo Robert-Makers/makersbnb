@@ -12,6 +12,8 @@ class DatabaseConnection:
     # VVV CHANGE BOTH OF THESE VVV
     DEV_DATABASE_NAME = "DEFAULT_MAKERSBNB_PROJECT"
     TEST_DATABASE_NAME = "DEFAULT_MAKERSBNB_PROJECT_TEST"
+    postgres_user = os.environ.get("POSTGRES_USER")
+    postgres_password = os.environ.get("POSTGRES_PASSWORD")
 
     def __init__(self, test_mode=False):
         self.test_mode = test_mode
@@ -22,7 +24,7 @@ class DatabaseConnection:
         if self.test_mode == False:
             try:
                 self.connection = psycopg.connect(
-                    f"postgresql://postgres:pass1234@db:5432/{self.DEV_DATABASE_NAME}",
+                    f"postgresql://{self.postgres_user}:{self.postgres_password}@db:5432/{self.DEV_DATABASE_NAME}",
                     row_factory=dict_row)
             except psycopg.OperationalError:
                 raise Exception(f"Couldn't connect to the database {self._database_name()}! " \
